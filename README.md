@@ -31,7 +31,7 @@ As we will see in the following implementation, gRPC supports basic request-repl
 
 ## Implementation
 
-The two services defined mimics the interfaces that could possibly be exposed by a temperature sensor and by an object detection server. 
+The two services defined mimic the interfaces that could possibly be exposed by a temperature sensor and by an object detection server. 
 
 The first one is called `TemperatureSensor` and exposes 2 rpcs: `SensorInfo` and `SensorData`. `SensorInfo` accepts a `Sensor` as input and answers with `SensorInfoResponse`, a message containing basic information about the Sensor requested. `SensorData` accepts a `Sensor` as input and returns, as a stream, a list of `TemperatureData` (measurements done by the sensor).
 
@@ -116,7 +116,7 @@ service ObjectDetection {
 
 ### Server implementation
 
-The server implementation can be read in `src/server.py`. It also reported here:
+The server implementation can be read in `src/server.py`. It is also reported here:
 
 ```python
 from definitions import def_pb2
@@ -264,7 +264,7 @@ def run():
         
         response_detect = stub2.Detect(image_iterator())
 
-        for detections in response_detect: # iterating throught elements of the stream
+        for detections in response_detect: # iterating through elements of the stream
             print('Number of detection:', len(detections.list))
 
             for detection in detections.list: # iterating through detections in the image
@@ -274,5 +274,5 @@ if __name__ == '__main__':
     run()
 ```
 
-The client has local objects known as `stubs` that implements the same methods as the service. The client can then call these methods and gRPC will take care of the communication between client and server. 
+The client has local objects known as `stubs` that implements the same methods as the service. The client can then call these methods and gRPC will take care of the communication between client and server. As we can see, using this approach, calling a procedure located on the server is as easy as calling a local method.
 
