@@ -1,15 +1,15 @@
 # Distributed Systems 2020/2021 Homework 2 - Alessio Cosenza
 
 ## Introduction
-In the field of client-server communication protocols, one of the most used protocol is *HTTP*, based on the *Request-Reply protocol*. In these years different alternatives where proposed, one of which is the *RPC* (*R*emote *P*rocedure *C*all) procol. The purpose of this homework is to provide a basic client-server implementation using *gRPC*: an RPC implementation provided by *Google*.
+In the field of client-server communication protocols, one of the most used protocol is **HTTP**, based on the **Request-Reply protocol**. In these years different alternatives where proposed, one of which is the **RPC** (**R**emote **P**rocedure **C**all) procol. The purpose of this homework is to provide a basic client-server implementation using **gRPC**: an RPC implementation provided by **Google**.
 
 Firstly, a brief introduction on RPC and gRPC is provided.
 
 ## RPC
 
-*RPC* allows clients to call procedures in server programs running on machines different than the one where the client is running. Similarly to how modern programming languages work, in a RPC environment, servers use the concept of *interfaces*. An interface is defined as a description of the services an object can provide. Using this paradigm, clients don't need to know the underlying implementation of the procedures they invoke, in this way the protocol is language-agnostic: a Python client can invoke procedures exposed by a Node.js server.
+**RPC** allows clients to call procedures in server programs running on machines different than the one where the client is running. Similarly to how modern programming languages work, in a RPC environment, servers use the concept of **interfaces**. An interface is defined as a description of the services an object can provide. Using this paradigm, clients don't need to know the underlying implementation of the procedures they invoke, in this way the protocol is language-agnostic: a Python client can invoke procedures exposed by a Node.js server.
 
-Commonly, RPC protocols use an *Interface Definition Language* (*IDL*), in order to define services' interfaces.
+Commonly, RPC protocols use an **Interface Definition Language** (**IDL**), in order to define services' interfaces.
 
 ## gRPC
 
